@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Demo - arctf style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <span class="prompt">$</span>
+            <span class="command">auth_system.init()</span>
+            <span class="cursor">_</span>
+        </div>
+        
+        <div class="ascii-logo">
+            <pre>
+    _        _   _        ____  
+   / \      | | | |      / ___| 
+  / _ \     | | | |     | |     
+ / ___ \    | |_| |     | |___  
+/_/   \_\    \___/       \____| 
+            </pre>
+        </div>
+
+        <div class="auth-box">
+            <div class="tabs">
+                <button class="tab active" data-tab="login">[ LOGIN ]</button>
+                <button class="tab" data-tab="register">[ REGISTER ]</button>
+            </div>
+
+            <form id="loginForm" class="form active">
+                <div class="input-group">
+                    <label for="loginEmail">email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword">password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">[ AUTHENTICATE ]</button>
+            </form>
+
+            <form id="registerForm" class="form">
+                <div class="input-group">
+                    <label for="regEmail">email:</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="regUsername">username:</label>
+                    <input type="text" id="regUsername" required>
+                </div>
+                <div class="input-group">
+                    <label for="regPassword">password:</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">[ CREATE_ACCOUNT ]</button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </div>
+
+        <div class="status-bar">
+            <span>STATUS: <span id="status">READY</span></span>
+            <span>API: <span id="apiStatus">CHECKING...</span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
